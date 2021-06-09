@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: auto;
+            background-color: rgba(122, 112, 56, 0.37);
+            color: rgb(160, 117, 25);
+        }
+        .coin{
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: x-large;
+            font-family: monospace;
+            align-items: center;
+        }
+        .img{
+            height: 30px;
+            width: 30px;
+        }
+        .head{
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: x-large;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .title{
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .name{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><h1>CRYPTO PRICE TRACKER</h1></div>
+    <div class="head">
+        <div>ank</div>
+        <div>Logo</div>
+        <div>Coin</div>
+        <div>Crypto-Name</div>
+        <div>Price</div>
+        <div>24hr-High</div>
+        <div>24hr-Low</div>
+        <div>Market-Cap of the Currency</div>
+        <div>Total Volume</div>
+    </div>
+    <div id="app"></div>
+</body>
+<script src="script.js"></script>
+</html>
