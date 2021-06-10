@@ -4,18 +4,39 @@ async function getcrypto() {
     // console.log(data);
     const coins = data.map(coin => {
         return `
-        <div class="coin">
-        <div class="rank">${coin.market_cap_rank}</div>
-        <div><img src = "${coin.image}" alt="${coin.name}" class="img"/></div>
-        <div class="symbol">${coin.symbol}</div>
-        <div class="name">${coin.name}</div>
-        <div class="price">₹${coin.current_price.toLocaleString()}</div>
-        <div class="high24h">₹${coin.high_24h.toLocaleString()}</div>
-        <div class="low24h">₹${coin.low_24h.toLocaleString()}</div>
-        <div class="marketCap">₹${coin.market_cap.toLocaleString()}</div>
-        <div class="volume">₹${coin.total_volume.toLocaleString()}</div>
-        </div>
-        `
+        
+<div class="columns">
+    <div class="column">
+        <strong>${coin.market_cap_rank}</strong>
+    </div>
+    <div class="column has-text-left">
+    <figure class="image is-32x32">
+        <img class="is-rounded" src = "${coin.image}" alt="${coin.name}" />
+    </figure>
+    </div>
+    <div class="column">
+        <strong>${coin.symbol.toUpperCase()}</strong>    
+    </div>
+    <div class="column ">
+        <div>${coin.name.toUpperCase()}</div>
+    </div>
+    <div class="column">
+        <div>₹${coin.current_price.toLocaleString()}</div>            
+    </div>
+    <div class="column">
+        <div>₹${coin.high_24h.toLocaleString()}</div>            
+    </div>
+    <div class="column">
+        <div>₹${coin.low_24h.toLocaleString()}</div>
+    </div>
+    <div class="column">
+        <div>₹${coin.market_cap.toLocaleString()}</div>
+    </div>
+    <div class="column">
+        <div>₹${coin.total_volume.toLocaleString()}</div>
+    </div>
+  </div>
+    `
     }).join('');
     document.querySelector('#app').innerHTML = coins
 }
